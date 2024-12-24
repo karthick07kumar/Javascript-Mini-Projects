@@ -1,0 +1,48 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background-image:url('a.jpeg');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-blend-mode: difference;
+    background-position: 40px;
+
+    background-repeat:repeat;
+
+}
+#n2{
+    display: flex;
+    justify-content: center;
+    padding-top: 250px;
+}
+button{
+    animation: myAnim 2s ease 0s 1 normal forwards;
+    
+}
+@keyframes myAnim {
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+#mybutton{
+    size: 100px;
+    font: size 3em;
+    padding: 10px 75px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+
+}
+#lab{
+    font-size: 200px;
+    color:black;
+}
+

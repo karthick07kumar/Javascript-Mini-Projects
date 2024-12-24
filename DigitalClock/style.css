@@ -1,0 +1,104 @@
+/* Basic styling */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+#clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#time {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Animated clock styles */
+.animated-clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+
+.hour,
+.minute,
+.second,
+.center-circle {
+    position: absolute;
+    background-color: #fff;
+    transform-origin: bottom center;
+    border-radius: 2px;
+}
+
+.hour {
+    width: 6px;
+    height: 50px;
+    top: 25px;
+    left: calc(50% - 3px);
+    animation: rotateHour 43200s infinite linear;
+}
+
+.minute {
+    width: 4px;
+    height: 70px;
+    top: 10px;
+    left: calc(50% - 2px);
+    animation: rotateMinute 3600s infinite linear;
+}
+
+.second {
+    width: 2px;
+    height: 90px;
+    top: 0;
+    left: calc(50% - 1px);
+    background-color: red;
+    animation: rotateSecond 60s infinite linear;
+}
+
+.center-circle {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: calc(50% - 6px);
+    left: calc(50% - 6px);
+}
+
+/* Animations */
+@keyframes rotateHour {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateMinute {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateSecond {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

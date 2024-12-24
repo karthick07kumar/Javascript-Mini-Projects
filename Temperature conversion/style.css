@@ -1,0 +1,129 @@
+/* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: black; /* Night theme */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Centered Form */
+form {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
+  text-align: center;
+  z-index: 10;
+}
+
+button {
+  background: #ff8c00;
+  color:black;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff7000;
+}
+
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+  color:black;
+  font-size: larger;
+}
+
+.sun {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, yellow 40%, orange 70%, transparent 100%);
+  border-radius: 50%;
+  animation: spin 8s linear infinite;
+  box-shadow: 0 0 30px 10px yellow;
+  z-index: 5;
+}
+
+.center {
+  width: 40px;
+  height: 40px;
+  background: orange;
+  border-radius: 50%;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+/* Illuminated Clouds */
+.cloud {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  width: 200px;
+  height: 80px;
+  background: #d3d3d3;
+  border-radius: 50px;
+  animation: move-cloud 10s linear infinite;
+  box-shadow: 0 0 15px rgba(211, 211, 211, 0.8);
+}
+
+.cloud:before,
+.cloud:after {
+  content: '';
+  position: absolute;
+  background: #d3d3d3;
+  border-radius: 50px;
+  box-shadow: 0 0 15px rgba(211, 211, 211, 0.8);
+}
+
+.cloud:before {
+  width: 140px;
+  height: 100px;
+  top: -50px;
+  left: 20px;
+}
+
+.cloud:after {
+  width: 120px;
+  height: 80px;
+  top: -40px;
+  right: 20px;
+}
+
+@keyframes move-cloud {
+  0% { transform: translateX(-200px); }
+  100% { transform: translateX(100vw); }
+}
+
+/* Lightning Effect */
+.lightning {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  width: 2px;
+  height: 200px;
+  background: white;
+  animation: flash 3s infinite;
+  opacity: 0;
+  box-shadow: 0 0 50px white;
+}
+
+@keyframes flash {
+  0%, 90% { opacity: 0; }
+  92% { opacity: 1; }
+  95% { opacity: 0; }
+}
